@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.BindViewToView">
+  <StackLayout>
+    <Label Text="View-to-view binding"
+           TextColor="Red"
+           FontAttributes="Bold"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"/>
+
+    <!-- Target 1 -->
+    <!-- BindingContext: Benytter Name property til at angive navnet på det referede element -->
+    <!-- Binding: Benytter Path property til at angive værdien fra det referede element -->
+    <!-- Binder til sliderens value, som er værdien af, hvor langt slideren er flyttet i forhold til min og max værdierne -->
+    <Label Text="Rotation"
+           BindingContext="{x:Reference Name=slider}"
+           Rotation="{Binding Path=Value}"
+           FontAttributes="Bold"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"/>
+
+    <!-- Source -->
+    <Slider x:Name="slider"
+            Maximum="360"
+            VerticalOptions="CenterAndExpand" />
+
+
+    <!-- Target 2 -->
+    <!-- BindingContext: Benytter ikke Name property til at angive navnet på det referede element, -->
+    <!-- da det er defineret i ReferenceExtension class og derfor ikke behøver at blive angivet -->
+    <!-- Binding: Benytter ikke Path= til at angive hvilken egenskab fra det referede element, -->
+    <!-- man skal benytte, da det kan undlades, hvis det er 1. item i extensionens markup -->
+    <Label BindingContext="{x:Reference slider}"
+          Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
+          FontAttributes="Bold"
+          FontSize="Large"
+          HorizontalOptions="Center"
+          VerticalOptions="CenterAndExpand" />
+  </StackLayout>
+</ContentPage>

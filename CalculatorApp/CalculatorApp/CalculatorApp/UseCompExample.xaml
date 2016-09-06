@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.UseCompExample">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand" 
+                 Orientation="Vertical">
+      <Label Text="Eksempler på brug af basis komponenter - her Label." HorizontalOptions="Center" />
+      <ActivityIndicator Color="Purple" IsRunning="True" HorizontalOptions="Start" />
+      <BoxView Color="Yellow" HeightRequest="40" WidthRequest="100" HorizontalOptions="Center"/>
+      <DatePicker Format="dd-MM-yyyy" HorizontalOptions="End"/>
+      <TimePicker HorizontalOptions="End"/>
+      <Entry Text="Enkel linje indtastning" BackgroundColor="White" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+      <Editor Text="Flere linjer indtastning" HeightRequest="80" BackgroundColor="White" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+      <Slider WidthRequest="200" HorizontalOptions="Center"/>
+      <SearchBar Text="Søgetekst" WidthRequest="300" BackgroundColor="Red" HorizontalOptions="End"/>
+    </StackLayout>  
+  </ContentPage.Content>
+</ContentPage>

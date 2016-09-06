@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.CustomComponent" 
+             Orientation="Horizontal" 
+             HorizontalOptions="FillAndExpand">
+  <BoxView x:Name="leftBoxView" 
+           BackgroundColor="Green"/>
+  <StackLayout Orientation="Vertical"
+               BackgroundColor="Purple" 
+               HorizontalOptions="FillAndExpand">
+    <Label x:Name="firstNameLbl" Text="Ib"/>
+    <Label x:Name="lastNameLbl" Text="Olsen"/>
+  </StackLayout>
+</StackLayout>

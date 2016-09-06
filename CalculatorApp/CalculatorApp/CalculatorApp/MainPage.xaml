@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.MainPage">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="15, 35, 15, 15"
+                Android="15, 15, 15, 15" />
+  </ContentPage.Padding>
+  
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical">
+      
+      <Label x:Name="displayLbl"
+             HorizontalOptions="FillAndExpand"
+             BackgroundColor="Blue"
+             FontSize="50" 
+             HorizontalTextAlignment="End" />
+
+      <StackLayout HorizontalOptions="FillAndExpand"
+                   Orientation="Horizontal">
+        <Button x:Name="btn7" Text="7" Clicked="OnNumBtnClicked" />
+        <Button x:Name="btn8" Text="8" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btn9" Text="9" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btnMult" Text="X" Clicked="OnMultBtnClicked"/>
+      </StackLayout>
+      
+      <StackLayout HorizontalOptions="FillAndExpand"
+                   Orientation="Horizontal">
+        <Button x:Name="btn4" Text="4" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btn5" Text="5" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btn6" Text="6" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btnSubst" Text="-" Clicked="OnSubstBtnClicked"/>
+      </StackLayout>
+      
+      <StackLayout HorizontalOptions="FillAndExpand"
+                   Orientation="Horizontal">
+        <Button x:Name="btn1" Text="1" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btn2" Text="2" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btn3" Text="3" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btnAdd" Text="+" Clicked="OnAddBtnClicked"/>
+      </StackLayout>
+      
+      <StackLayout HorizontalOptions="FillAndExpand"
+                   Orientation="Horizontal">
+        <Button x:Name="btnNegate" Text="-" Clicked="OnNegBtnClicked"/>
+        <Button x:Name="btn0" Text="0" Clicked="OnNumBtnClicked"/>
+        <Button x:Name="btnDecimal" Text="," Clicked="OnDecBtnClicked"/>
+        <Button x:Name="btnEqual" Text="=" Clicked="OnEqualBtnClicked"/>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

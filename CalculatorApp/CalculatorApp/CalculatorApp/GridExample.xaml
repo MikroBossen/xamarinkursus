@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.GridExample">
+  <Grid ColumnSpacing="10" RowSpacing="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"/><!--Udfyld rest. højde - her 66%-->
+      <RowDefinition Height="*"/><!--Udfyld rest. højde - her 33%-->
+      <RowDefinition Height="200"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/> <!--Indret efter indhold i kolonnen-->
+      <ColumnDefinition Width="*"/><!--Udfyld rest. bredde-->
+    </Grid.ColumnDefinitions>
+    <Label Text="Top Left" Grid.Row="0" Grid.Column="0" BackgroundColor="Blue"/>
+    <Label Text="Top Right" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" BackgroundColor="White" TextColor="Black"/>
+    <Label Text="Middle Left" Grid.Row="1" Grid.Column="0" BackgroundColor="Red"/>
+    <Label Text="Middle Right" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1" BackgroundColor="Green"/>
+    <Label Text="Bottom Left" Grid.Row="2" Grid.Column="0" BackgroundColor="Yellow" TextColor="Black"/>
+    <Label Text="Bottom Right" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="1" BackgroundColor="Purple"/>
+  </Grid>
+</ContentPage>
