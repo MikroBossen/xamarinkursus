@@ -1,0 +1,14 @@
+14 = RGB-kode:	R: 253 G: 220 B: 59	#F6D134
+15 = RGB-kode:	R: 245 G: 212 B: 42	#F5D42A
+16 = RGB-kode:	R: 239 G: 194 B: 21	#FBC933
+
+18 = RGB-kode:	R: 251 G: 205 B: 40	#F7D12E
+
+20 = RGB-kode:	R: 254 G: 178 B: 38	#FEB024
+21 = RGB-kode:	R: 240 G: 173 B: 34	#FBAE36
+22 = RGB-kode:	R: 249 G: 153 B: 37	#F79619
+23 = RGB-kode:	R: 233 G: 151 B: 48	#F6942C
+24 = RGB-kode:	R: 251 G: 148 B: 35	#FB9423
+
+L  = RGB-kode:	R: 112 G: 188 B: 5	#70BC05
+M  = RGB-kode:	R: 242 G: 236 B: 5	#F2EC05

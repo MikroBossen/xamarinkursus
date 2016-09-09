@@ -25,14 +25,14 @@ namespace CalculatorApp
             //var bindBW = new BindBackwards();
             //var dateMVVM = new DateMVVM();
             //var clockMVVM = new ClockMVVM();
-            //var colorMVVM = new ColorMVVM();
+            var colorMVVM = new ColorMVVM();
             //var phoneMVVM = new EnterPhoneNoMVVM();
             //var imageEx = new ImageExample();
             //var imageEx2 = new ImageExample2();
             var custComp = new CustomComponentUse();
             var custComp2 = new CustomComponentBinding();
 
-            navigationPage.PushAsync(custComp2);
+            navigationPage.PushAsync(colorMVVM);
             MainPage = navigationPage;
 
 

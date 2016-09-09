@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherDesign.WeatherView">
+  <!-- Padding for iPhone -->
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelCityName" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="24"/>
+      </Style>
+
+      <Style x:Key="labelLargeSize" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="20"/>
+      </Style>
+
+      <Style x:Key="labelMediumSize" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="16"/>
+      </Style>
+
+      <Style x:Key="labelSmallSize" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="10"/>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <RelativeLayout>
+    <Image x:Name="bgImage" Source="bg_suncloud.jpg" Aspect="AspectFill"
+           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+    <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">      
+      <StackLayout x:Name="weatherStackLayout" 
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand">
+        
+        <StackLayout x:Name="topStackLayout" 
+                     Orientation="Vertical" 
+                     HorizontalOptions="FillAndExpand"
+                     Padding="10">
+          <Label x:Name="cityNameLbl"
+                 Style="{StaticResource labelCityName}"/>
+          <Label x:Name="cityAltitudeLbl"
+                 Style="{StaticResource labelMediumSize}"/>
+          <Label x:Name="dayLbl"
+                 Style="{StaticResource labelLargeSize}"/>
+        </StackLayout>
+
+        <StackLayout x:Name="middleStackLayout" 
+                     Orientation="Horizontal" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand"
+                     Padding="5">
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="FirstlodCC" Grid.Column="0"/>
+
+            <StackLayout x:Name="SecondlodCC" Grid.Column="1"/>
+
+            <StackLayout x:Name="ThirdlodCC" Grid.Column="2"/>
+
+            <StackLayout x:Name="FourthlodCC" Grid.Column="3"/>
+          </Grid>
+        </StackLayout>
+
+        <StackLayout x:Name="buttomStackLayout" 
+                     Orientation="Horizontal" 
+                     HorizontalOptions="FillAndExpand" 
+                     Padding="5">
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+          
+            <Label x:Name="udskiftTilForsteKvadratCustomComponent" 
+                   Grid.Column="0"
+                   Text="1. kvad. CC"
+                   Style="{StaticResource labelSmallSize}"/>
+            
+            <Label x:Name="udskiftTilAndenKvadratCustomComponent" 
+                   Grid.Column="1"
+                   Text="2. kvad. CC"
+                   Style="{StaticResource labelSmallSize}"/>
+          
+            <Label x:Name="udskiftTilTredjeKvadratCustomComponent" 
+                   Grid.Column="2"
+                   Text="3. kvad. CC"
+                   Style="{StaticResource labelSmallSize}"/>
+          </Grid>
+        </StackLayout>
+      </StackLayout>
+    </Grid>
+  </RelativeLayout>
+</ContentPage>

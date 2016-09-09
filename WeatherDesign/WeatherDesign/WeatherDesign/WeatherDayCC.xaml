@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherDesign.WeatherDayCC">
+  <Label x:Name="HourLbl" Text="13"/>
+  <Label x:Name="MinuteLbl" Text="00"/>
+  <Image x:Name="SunCloudImg" Source="icon"/>
+  <Label x:Name="HumidLbl" Text="84%"/>
+  <BoxView x:Name="TempBv" Color="#FB9423"/>
+  <Label x:Name="TempLbl" Text="-1&#176;C"/>
+  <Image x:Name="WindImg" Source="icon"/>
+  <Label x:Name="UvStaticLbl" Text="UV"/>
+  <BoxView x:Name="UvBv" Color="#70BC05" Rotation="45"/>
+  <Label x:Name="UvLbl" Text="L"/>
+</StackLayout>

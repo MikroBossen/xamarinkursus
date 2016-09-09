@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewExample.PersonView">
+  <StackLayout BackgroundColor="Blue" Orientation="Horizontal">
+    <Image x:Name="myImage"/>
+    <StackLayout Orientation="Vertical">
+      <Label x:Name="firstNameLbl" TextColor="White"/>
+      <Label x:Name="lastNameLbl" TextColor="White"/>
+    </StackLayout>
+  </StackLayout>
+</ViewCell>

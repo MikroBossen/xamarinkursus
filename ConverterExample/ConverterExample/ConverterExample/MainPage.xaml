@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ConverterExample"
+             x:Class="ConverterExample.MainPage">
+  <StackLayout Orientation="Vertical">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Dagen idag er en"/>
+      <Label x:Name="myLabelToday"/>
+    </StackLayout>
+    <StackLayout Orientation="Vertical">
+      <Label Text=""/>
+      <Label Text="Imorgen er det:"/>
+      <Label x:Name="myLabelTomorrow"/>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>
