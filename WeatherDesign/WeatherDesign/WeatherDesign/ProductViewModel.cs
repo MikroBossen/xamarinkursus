@@ -10,10 +10,10 @@ namespace WeatherDesign
 {
     public class ProductViewModel : INotifyPropertyChanged
     {
-        private int id;
-        private string name;
-        private string category;
-        private decimal price;
+        private int idPVM;
+        private string namePVM;
+        private string categoryPVM;
+        private decimal pricePVM;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -27,12 +27,12 @@ namespace WeatherDesign
 
         public int Id
         {
-            get { return this.id; }
+            get { return this.idPVM; }
             set
             {
-                if (value != this.id)
+                if (value != this.idPVM)
                 {
-                    this.id = value;
+                    this.idPVM = value;
                     NotifyPropertyChanged();
                 }
             }
@@ -40,12 +40,12 @@ namespace WeatherDesign
 
         public string Name
         {
-            get { return this.name; }
+            get { return this.namePVM; }
             set
             {
-                if (value != this.name)
+                if (value != this.namePVM)
                 {
-                    this.name = value;
+                    this.namePVM = value;
                     NotifyPropertyChanged();
                 }
             }
@@ -53,12 +53,12 @@ namespace WeatherDesign
 
         public string Category
         {
-            get { return this.category; }
+            get { return this.categoryPVM; }
             set
             {
-                if (value != this.category)
+                if (value != this.categoryPVM)
                 {
-                    this.category = value;
+                    this.categoryPVM = value;
                     NotifyPropertyChanged();
                 }
             }
@@ -66,15 +66,25 @@ namespace WeatherDesign
 
         public decimal Price
         {
-            get { return this.price; }
+            get { return this.pricePVM; }
             set
             {
-                if (value != this.price)
+                if (value != this.pricePVM)
                 {
-                    this.price = value;
+                    this.pricePVM = value;
                     NotifyPropertyChanged();
                 }
             }
+        }
+
+        public async void LoadProductAsync(int id)
+        {
+            var proSC = new ProductServiceClient();
+            Product prod = await proSC.GetProduct(id);
+            Id = prod.Id;
+            Name = prod.Name;
+            Category = prod.Category;
+            Price = prod.Price;
         }
     }
 }

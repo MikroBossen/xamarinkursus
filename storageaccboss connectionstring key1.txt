@@ -1,0 +1,1 @@
+DefaultEndpointsProtocol=https;AccountName=storageaccboss;AccountKey=/BB2TRxBV2kc+qm4OQqh29VdDmWLKeovkNvN6StJzZS41Soea4bxPX93h1/Z2ezXQoTl1ge9CiIzhpIETRgkEw==;

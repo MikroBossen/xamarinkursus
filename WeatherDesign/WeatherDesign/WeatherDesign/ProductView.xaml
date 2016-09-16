@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WeatherDesign;assembly=WeatherDesign"
+             x:Class="WeatherDesign.ProductView">
+  <!-- Padding for iPhone -->
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+
+  <StackLayout Orientation="Vertical">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Angiv produkt ID:" />
+      <Entry x:Name="searchIDEnt" Text="{Binding Id, Mode=TwoWay}">
+      </Entry>
+      <Button x:Name="getProductBtn" Clicked="onClickedGetProductBtn" />
+    </StackLayout>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Produkt ID:" Grid.Row="0" Grid.Column="0"/>
+      <Label x:Name="getId" Text="{Binding Id, Mode=OneWay}" Grid.Row="0" Grid.Column="1"/>
+
+      <Label Text="Produktnavn:" Grid.Row="1" Grid.Column="0"/>
+      <Label x:Name="getName" Text="{Binding Name, Mode=OneWay}" Grid.Row="1" Grid.Column="1"/>
+      
+      
+    </Grid>
+    
+    
+  </StackLayout>
+</ContentPage>
